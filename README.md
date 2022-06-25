@@ -1,2 +1,4 @@
-# Hand Pose Annotation Tool
-Repository for color-based 3D hand pose annotation tool using a single RGB image.
+# 3D Hands for All
+We introduce an 3D hand pose annotation tool that can annotate using a single RGB image. This tool enables you to provide an arbitrary number of 2D keypoints and automatically optimize the MANO hand pose to fit the provided keypoints. It also allows full control of all joint rotations (with physical constraints) for more refined annotation. In addition, we provide pretrained 2D and 3D models to enable automatic annotation. However, manual refinement might be needed for higher accuracy as the estimated 2D/3D keypoints can be imperfect.
+
+This tool is used in our paper [Ego2HandsPose: A Dataset for Egocentric Two-hand 3D Global Pose Estimation](https://arxiv.org/abs/2206.04927) for the annotation of the Ego2Hands dataset. For more details on Ego2Hands, please check out [this repo](https://github.com/AlextheEngineer/Ego2Hands).
