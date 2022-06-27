@@ -13,3 +13,7 @@ We used the following steps to set up the proper environment in Anaconda on a Wi
 
 To install MANO hand, download the repository from https://github.com/hassony2/manopth and move the root folder into "models/MANO_layer". The "setup.py" file should be located at "models/MANO_layer/manopth/setup.py". To install, navigate to the same directory "setup.py" is located in and run
   > pip install .
+
+To install pytorch3d, please follow the official instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+
+2. **Usage**
