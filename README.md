@@ -21,6 +21,8 @@ To install pytorch3d, please follow the official instructions [here](https://git
 1. **General Introduction**
 <img src="imgs/general_intro.png" width="640">
 
-  * hi
+The original image is padded to be square (shown in #6), which matches the image resolution of the rendered MANO hand image (shown in #7). The goal is to generate a MANO hand model that matches the hand in the image. Since the camera intrinsics are unknown, the resulting MANO hand's exact global 3D joint locations are based on the camera intrinsics of the rendering camera.
+
+  * Hi
   * hi2
 3. **Detailed Usage**
