@@ -40,18 +40,22 @@ The original image is padded to be square (shown in #6), which matches the image
 
 ### 2D Keypoint Annotation
   * Manual Mode
+
 Although the MANO parameters are controllable using the sliders that control the joint rotations (e.g. #2, #4, #5) and root joint location (#3), we want to minimize the need for manual annotation. To this end, the tool enables the user to annotate 2D keypoints by first using the joint selection slider (#1), then click either the original image (#6) or the magnified image (#8). To select the magnifying region, simply right click on the original image (#6) and scroll to adjust the cropping size. 
 
   * Auto Mode
+
 To simplify the 2D keypoint annotation process, we pretrained a HRNet on Ego2HandsPose, HIU-DMTL and FreiHand. To automatically predict the 2D keypoints, simply provide the hand detection bounding box and click "Pred 2D". Manual refinement of certain keypoints might be needed.
 
 ### 3D Hand Fitting
   * Manual Mode
+
 Given an arbitrary number of annotated 2D keypoints, button "Fit root" fits the hand using only the wrist joint (joint#0 needs to be annotated). To fit the MANO hand from the default pose, you would first need to adjust the global orientation sliders (shown in #2) to give the hand a good initial point. With a good initial pose, you can then click "Fit 2D" to gradient descent into the global minimum given the annotated 2D keypoints. Due to the lack of depth info, sometimes there are two plausible solution for the same set of 2D keypoints. In this case, you can either manually rotate the finger(s) to be closer to the real solution and then press "Fit 2D". When automatic fitting does not yield a perfect solution, the user can always manually adjust the joint rotations for some small final adjustments. Use "Toggle" button to see if the rendered hand overlays with the hand in the image well.
 
 For detailed control of each finger, the 3 sliders on the left control the 3D rotation of the first joint of the specific finger (shown in #4). The 3 sliders on the right control the 1D rotation of the first, second and third joint of the specific finger. 
 
   * Auto Mode
+
 To simplify the overall fitting process, we pretrained a custom Resnet on MANO3DHands (see paper) for 3D canonical pose estimation. After a hand detection box is provided, you can simply click "Pred 3D 3rd" or "Pred 3D ego" (trained on MANO3DHands's 3rd person and egocentric version respectively) to automatically predict the 2D keypoints, 3D canonical keypoints, and fit the hand. "Pred 3D 3rd" works well in general for all viewpoints. "Pred 3D ego" should work better for egocentric viewpoint. Manual refinement might be needed depending on the 2D/3D estimation accuracy. 
 
 ### Final Validation
