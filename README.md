@@ -36,10 +36,10 @@ To simplify the 2D keypoint annotation process, we pretrained a HRNet on Ego2Han
 
 ### 3D Hand Fitting
   * Manual Mode
-Given an arbitrary number of annotated 2D keypoints, button "Fit root" fits the hand using only the wrist joint (joint#0 needs to be annotated). To fit the MANO hand from the default pose, you would first need to adjust the global orientation sliders (shown in #2) to give the hand a good initial point. With a good initial pose, you can then click "Fit 2D" to gradient descent into the global minimum given the annotated 2D keypoints. Due to the lack of depth info, sometimes there are two plausible solution for the same set of 2D keypoints. In this case, you can either manually rotate the finger(s) to be closer to the real solution and then press "Fit 2D". When automatic fitting does not yield a perfect solution, the user can always manually adjust the joint rotations for some small final adjustments.
+Given an arbitrary number of annotated 2D keypoints, button "Fit root" fits the hand using only the wrist joint (joint#0 needs to be annotated). To fit the MANO hand from the default pose, you would first need to adjust the global orientation sliders (shown in #2) to give the hand a good initial point. With a good initial pose, you can then click "Fit 2D" to gradient descent into the global minimum given the annotated 2D keypoints. Due to the lack of depth info, sometimes there are two plausible solution for the same set of 2D keypoints. In this case, you can either manually rotate the finger(s) to be closer to the real solution and then press "Fit 2D". When automatic fitting does not yield a perfect solution, the user can always manually adjust the joint rotations for some small final adjustments. Use "Toggle" button to see if the rendered hand overlays with the hand in the image well.
 
   * Auto Mode
-To simplify the overall fitting process, we pretrained a custom Resnet on MANO3DHands (see paper) for 3D canonical pose estimation. After a hand detection box is provided, you can simply click "Pred 3D 3rd" or "Pred 3D ego" to automatically predict the 2D keypoints, 3D canonical keypoints, and fit the hand. Manual refinement might be needed depending on the 2D/3D estimation accuracy. 
+To simplify the overall fitting process, we pretrained a custom Resnet on MANO3DHands (see paper) for 3D canonical pose estimation. After a hand detection box is provided, you can simply click "Pred 3D 3rd" or "Pred 3D ego" (trained on MANO3DHands's 3rd person and egocentric version respectively) to automatically predict the 2D keypoints, 3D canonical keypoints, and fit the hand. "Pred 3D 3rd" works well in general for all viewpoints. "Pred 3D ego" should work better for egocentric viewpoint. Manual refinement might be needed depending on the 2D/3D estimation accuracy. 
 
 ### Final Validation
 It can be hard to thoroughly examine the 3D pose from a single view. To validate the hand pose from other views, click the "freeze" button next to the global orientation sliders (#2). You can now change the global orientation freely to view the hand pose from different angles. After validation, click the "restore" button to restore the previously saved global orientation.
@@ -52,7 +52,12 @@ To save the hand pose, click the "Save" button, which will save the MANO paramet
 This ndarray contains 51 values. The first 3 values contain the global 3D root joint location (x: increases going right. y: increases going down. z: increases going away from camera origin). The next 3 values contain the global orientation for the hand pose (rotational values for the root joint). The remaining 45 values contain rotations for 15 hand joints (finger tip does not have a rotation).
 
   * 3D Global Keypoints file
+
 This ndarray has shape of [21, 3], which contains the 3D global joint location (in cm) for all 21 joints.
 
   * 2D Global Keypoints file
+
 This ndarray has shape of [21, 2], which contains the 2D joint location ((row, col) in percentages, so they are invariant to image scaling) for all 21 joints. 
+
+## License
+This tool can be used freely for scientific or commercial purposes. If you use this tool for data annotation of your research, please cite the corresponding [paper](https://arxiv.org/abs/2206.04927).
