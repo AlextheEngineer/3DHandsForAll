@@ -1,4 +1,4 @@
-# 3D Hands for All (3D hand pose annotation using a single image)
+# 3D Hands for All
 <img src="imgs/UI_sample.png" width="640">
 We introduce a 3D hand pose annotation tool that can annotate using a single RGB image. This tool enables you to provide an arbitrary number of 2D keypoints and automatically optimize the MANO hand pose to fit the provided keypoints. It also allows full control of all joint rotations (with physical constraints) for more refined annotation. In addition, we provide pretrained 2D and 3D models to enable automatic annotation. However, manual refinement might be needed for higher accuracy as the estimated 2D/3D keypoints can be imperfect.
 
@@ -16,6 +16,15 @@ To install MANO hand, download the repository from https://github.com/hassony2/m
   > pip install .
 
 To install pytorch3d, please follow the official instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+
+## Download Pretrained Models
+* Download the following models and place them in the "models_saved" directory.
+
+* Model 2D (https://byu.box.com/s/ygpnrc7d4a6lh7pxoktdaecc0tk4473m)
+
+* Model 3D 3rd-person (https://byu.box.com/s/tigqgfruupnb6hodkms63qfqwal9xmp8)
+
+* Model 3D egocentric (https://byu.box.com/s/byznwg5lvi7c4qmhre2g0fkbrnd7nxd0)
 
 ## Usage
 <img src="imgs/general_intro.png" width="640">
