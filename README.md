@@ -50,9 +50,17 @@ To simplify the 2D keypoint annotation process, we pretrained a HRNet on Ego2Han
 ### 3D Hand Fitting
   * Manual Mode
 
-Given an arbitrary number of annotated 2D keypoints, button "Fit root" fits the hand using only the wrist joint (joint#0 needs to be annotated). To fit the MANO hand from the default pose, you would first need to adjust the global orientation sliders (shown in #2) to give the hand a good initial point. With a good initial pose, you can then click "Fit 2D" to gradient descent into the global minimum given the annotated 2D keypoints. Due to the lack of depth info, sometimes there are two plausible solution for the same set of 2D keypoints. In this case, you can either manually rotate the finger(s) to be closer to the real solution and then press "Fit 2D". When automatic fitting does not yield a perfect solution, the user can always manually adjust the joint rotations for some small final adjustments. Use "Toggle" button to see if the rendered hand overlays with the hand in the image well.
+Given an arbitrary number of annotated 2D keypoints, follow these steps:
 
-For detailed control of each finger, the 3 sliders on the left control the 3D rotation of the first joint of the specific finger (shown in #4). The 3 sliders on the right control the 1D rotation of the first, second and third joint of the specific finger. 
+1. button "Fit root" fits the hand using only the wrist joint (joint#0 needs to be annotated)
+
+2. To fit the MANO hand from the default pose, you would first need to adjust the global orientation sliders (shown in #2) to give the hand a good initial point. 
+
+3. With a good initial pose, you can then click "Fit 2D" to gradient descent into the global minimum given the annotated 2D keypoints. Due to the lack of depth info, sometimes there are two plausible solution for the same set of 2D keypoints. In this case, you can either manually rotate the finger(s) to be closer to the real solution and then press "Fit 2D". 
+
+4. Use "Toggle" button to see if the rendered hand overlays with the hand in the image well. When automatic fitting does not yield a perfect solution, the user can always manually adjust the joint rotations for some small final adjustments. 
+
+5. Final slight adjustments using manual refinement. For detailed control of each finger, the 3 sliders on the left control the 3D rotation of the first joint of the specific finger (shown in #4). The 3 sliders on the right control the 1D rotation of the first, second and third joint of the specific finger. 
 
   * Auto Mode
 
