@@ -5,6 +5,8 @@ We introduce a 3D hand pose annotation tool that can annotate using a single RGB
 
 Existing annotation methods rely on multi-view settings or depth cameras. Consequently, the collected color-based hand images are captured with laboratory environments as background. The limitation in quantity and diversity of 3D hand pose data in the community makes it challenging for learning-based models to generalize to scenes in the wild. This tool gives everyone the ability to obtain 3D hand pose data using monocular RGB images. It is used in our paper [Ego2HandsPose: A Dataset for Egocentric Two-hand 3D Global Pose Estimation](https://arxiv.org/abs/2206.04927) for the annotation of the Ego2Hands dataset, which can be used to composite two-hand training images with significantly higher quantity and diversity. Click here for more details on [Ego2Hands](https://github.com/AlextheEngineer/Ego2Hands).
 
+Additional code and data will be released soon.
+
 ## Environment Setup
 * We used the following steps to set up the proper environment in Anaconda on a Windows 10 machine:
   > conda create --name hand3d_env python=3.7\
