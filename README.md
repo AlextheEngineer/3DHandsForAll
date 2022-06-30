@@ -20,4 +20,6 @@ To install pytorch3d, please follow the official instructions [here](https://git
 ## Usage
 1. **General Introduction**
 <img src="imgs/general_intro.png" width="640">
-3. **Download the repository**
+  * hi
+  * hi2
+3. **Detailed Usage**
