@@ -12,10 +12,10 @@ Existing annotation methods rely on multi-view settings or depth cameras. Conseq
   > conda install -c conda-forge opencv\
   > conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch (see https://pytorch.org/ for a proper setting specific for your machine)\
 
-To install MANO hand, download the repository from https://github.com/hassony2/manopth and move the root folder into "models/MANO_layer". The "setup.py" file should be located at "models/MANO_layer/manopth/setup.py". To install, navigate to the same directory "setup.py" is located in and run
+* To install MANO hand, download the repository from https://github.com/hassony2/manopth and move the root folder into "models/MANO_layer". The "setup.py" file should be located at "models/MANO_layer/manopth/setup.py". To install, navigate to the same directory "setup.py" is located in and run
   > pip install .
 
-To install pytorch3d, please follow the official instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+* To install pytorch3d, please follow the official instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
 
 ## Download Pretrained Models
 * Download the following models and place them in the "models_saved" directory.
