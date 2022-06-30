@@ -18,5 +18,6 @@ To install MANO hand, download the repository from https://github.com/hassony2/m
 To install pytorch3d, please follow the official instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
 
 ## Usage
-1. **Download the repository**
-2. **Download the repository**
+1. **General Introduction**
+<img src="imgs/general_intro.png" width="480">
+3. **Download the repository**
