@@ -1,5 +1,5 @@
 # 3D Hands for All (3D hand pose annotation using a single image)
-<img src="imgs/sample_img.png" width="640">
+<img src="imgs/UI_sample.png" width="640">
 We introduce a 3D hand pose annotation tool that can annotate using a single RGB image. This tool enables you to provide an arbitrary number of 2D keypoints and automatically optimize the MANO hand pose to fit the provided keypoints. It also allows full control of all joint rotations (with physical constraints) for more refined annotation. In addition, we provide pretrained 2D and 3D models to enable automatic annotation. However, manual refinement might be needed for higher accuracy as the estimated 2D/3D keypoints can be imperfect.
 
 
