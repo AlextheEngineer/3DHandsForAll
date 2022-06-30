@@ -39,6 +39,13 @@ Given an arbitrary number of annotated 2D keypoints, button "Fit root" fits the 
 To simplify the overall fitting process, we pretrained a custom Resnet on MANO3DHands (see paper) for 3D canonical pose estimation. After a hand detection box is provided, you can simply click "Pred 3D 3rd" or "Pred 3D ego" to automatically predict the 2D keypoints, 3D canonical keypoints, and fit the hand. Manual refinement might be needed depending on the 2D/3D estimation accuracy. 
 
 ### Final Validation
-hi
+It can be hard to thoroughly examine the 3D pose from a single view. To validate the hand pose from other views, click the "freeze" button next to the global orientation sliders (#2). You can now change the global orientation freely to view the hand pose from different angles. After validation, click the "restore" button to restore the previously saved global orientation.
 
 ### Saving
+To save the hand pose, click the "Save" button, which will save the MANO parameters, 3D global joint locations and 2D image joint locations in the same directory for the input images.
+
+  * MANO file
+hi
+  * 3D Global Keypoints file
+hi
+
