@@ -22,11 +22,11 @@ Additional code and data will be released soon.
 ## Download Pretrained Models
 * Download the following models and place them in the "models_saved" directory.
 
-* Model 2D (https://byu.box.com/s/ygpnrc7d4a6lh7pxoktdaecc0tk4473m)
+* Model 2D (https://drive.google.com/file/d/1hyba-Q_rCqHGrYVQgni7v_4Wbd-wsNpP/view?usp=share_link)
 
-* Model 3D 3rd-person (https://byu.box.com/s/tigqgfruupnb6hodkms63qfqwal9xmp8)
+* Model 3D 3rd-person (https://drive.google.com/file/d/1Z9ThKF9bdrDhK2D3QRA_ZCBtdvA1TF4x/view?usp=share_link)
 
-* Model 3D egocentric (https://byu.box.com/s/byznwg5lvi7c4qmhre2g0fkbrnd7nxd0)
+* Model 3D egocentric (https://drive.google.com/file/d/1twz0yQM6WCKm3Jk54oPVPVJDZF_g-3C6/view?usp=share_link)
 
 ## Usage
 <img src="imgs/general_intro.png" width="640">
